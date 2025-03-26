@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>영화관에서 있었던 황당한 일들</title>
+	<style>
+		@font-face {
+  		font-family: 'VITRO INSPIRE';
+  		src: url('VITRO INSPIRE TTF.ttf') format('woff2');
+  		font-weight: normal;
+  		font-style: normal;
+		}		
+
+			@font-face {
+  		font-family: 'Pak_Yong_jun';
+  		src: url('Pak_Yong_jun.otf') format('woff2');
+  		font-weight: normal;
+  		font-style: normal;
+		}		
+
+		html{font-family:'VITRO INSPIRE' ;font-size: 62.6%; word-break: keep-all;}
+		html, body {
+    	overflow-x: hidden;
+    	width: 100%;}
+    	body{background: black;}
+		section{padding-bottom: 100px; padding-top: 100px; padding-left: 100px; padding-right: 100px}
+		body,h1,h2,h3,p,ui,ol{margin:0; padding:0}
+		footer{padding: 50px;
+  		font-size: 2.4rem;
+  		background: #FF3C00;
+  		margin-top: 100px;}
+		nav{background: black;margin: 0}
+
+
+
+
+		.nav_text{font-size: 2rem; padding-top: 5px; padding-right: 5px;}
+		.title_text{;font-size: 45rem; color: #FFFFF5; padding-top: 160px}
+		.title_text2{position: absolute;font-family:'Pak_Yong_jun' ;font-size: 11rem; color: #FF3C00;z-index: 2;top: 190px; padding-left: 70px}
+		.title_bg{background: url('title_img.jpg') center/cover no-repeat; width: 100%; padding-bottom: 250px}
+		.ep1_bg{background: url('ghibli.jpg')center/cover no-repeat; width: 100%; padding-bottom: 500px; position: relative; right: 100px;z-index: -1; padding-top: 300x;background-attachment: fixed;}
+		.ep1_bg div{padding-top: 250px}
+		.section-with-gif {position: relative;
+  		width: 100%;
+  		height: 1000px;
+  		overflow: hidden;;background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, white 100%),url('images/ghibli_bg.gif') center/cover no-repeat;margin-bottom: -5px}
+		.gif_background {position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		background: url('gif_bg.gif') center/cover no-repeat;
+  		z-index: -1;}
+		.image-container {position: absolute;top: 50%;left: 45%;transform: translate(-50%, -50%);z-index: 1;}
+		.speech-bubble {position: absolute;background: white; padding: 10px 15px; border-radius: 10px;border: 1px solid black;font-weight: bold;font-size: 64px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);z-index: 2;}
+
+		.bubble1 {top: 400px;left: 300px;}
+		.bubble2 {top: 850px;right: 500px;}
+		.ep2_bg{background: url('bg_img2.jpg')center/cover no-repeat; width: 100%; padding-bottom: 500px; position: relative; right: 100px;z-index: -1; padding-top: 300x;background-attachment: fixed;}
+		.ep2_bg div{padding-top: 250px}
+		.eea-speachbubble{;background: url('speechbubble.png') no-repeat center/contain;font-size: 4rem; line-height: 1.7; position: absolute;width: 1000px;height: 750px;display: flex;justify-content: center;align-items: center;text-align: center;z-index: 2;;top: 50%; left: 50%;transform: translate(-50%, -50%);padding-bottom: 70px}
+		.emoji-container {position: relative;width: fit-content;margin:auto; width: 1000px; height: 750px }
+		.thinking-emoji {width: 100px;position: relative;z-index: 1;left: 550px; top: 650px}
+		.ep2_img_container{position: relative;top:400px;left:500px ;z-index: 1;}
+		.text-overlay {
+  		position: absolute;
+  		top: 400px;
+  		left: 0;
+  		padding: 100px;
+  		width: 100%;
+  		z-index: 2;}
+		.ep3_bg{background: url('bg_img3.jpg')center/cover no-repeat; width: 100%; padding-bottom: 500px; position: relative; right: 100px;z-index: -1; padding-top: 300x;background-attachment: fixed;}
+		.ep3_bg div{padding-top: 250px}
+		.boom_box{position: relative; width: 900px; margin: auto;}
+		.boom_box img{width: 100%}
+		.boom_text{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20rem; color: black;}
+		.sorry_container{margin: auto;position: relative;width: 1000px}
+		.sorry_container img{width: 100%}
+		.bg_black{background: black;position: relative;}
+		.bg_black .dot_connector{color: white;}
+		.bg_white{background: white;}
+		.bg_red{background: rgb(255,85,0);
+		background: linear-gradient(0deg, rgba(255,85,0,1) 0%, rgba(255,186,75,1) 80%);; position: relative; width: 100%; height: 2500px; overflow: hidden;}
+		.bg_red .dot_connector{color: black;}
+		.white{color: white;}
+		.black{color: black;}
+		.red{color: #FF3C00;}
+		.lightyellow{color:#FFFFF5}
+		.flex{display: flex; gap:1340px }
+		.text_right{text-align: right;}
+		.text_center{text-align: center;}
+		.padding-top1{padding-top:300px}
+		.padding-top2{padding-top:500px}
+		.padding-top3{padding-top:800px}
+		.padding-top4{padding-top:100px}
+		.padding-bottom1{padding-bottom: 100px}
+		.h2_size{font-size: 20rem}
+		.text_size1{font-size: 9.4rem}
+		.text_size2{font-size: 3.4rem}
+		.text_size3{font-size: 17.5rem}
+		.basic_text{font-size: 3rem; line-height: 1.6;}
+		.tight-line {line-height: 1.15;}
+		.gradient1{background: rgb(255,186,75);
+		background: radial-gradient(circle, rgba(255,186,75,1) 0%, rgba(255,85,0,1) 100%);position: relative; overflow: hidden; height: 1600px}
+		.popcorn_container{position: absolute; width:300px ;top: 600px; left: 400px; transform: rotate(-25deg); z-index: 0}
+		.popcorn_container{width: 100%}
+		.popcorn_text1{position: absolute; z-index: 2}
+		.coke_container{position: absolute;
+  		width: 180px;
+  		top: 700px;
+  		right: 900px;
+  		z-index: 0; 
+  		opacity: 0.85;
+  		transform: rotate(-5deg);}
+		.z-index{z-index: 2}
+		.gradient1_text1{padding-top: 350px}
+		.gradient1_text2{padding-top: 700px}
+		.gradient1_text_big{font-size: 7.5rem}
+		.gradient1_lineheight{line-height: 0.8t}
+		.stroke-text {
+  		color: #fcbf4f; 
+  		text-shadow:
+    	 -1px -1px 0 #000,
+     	 1px -1px 0 #000,
+    	 -1px  1px 0 #000,
+     	 1px  1px 0 #000; }
+     	 .bg_frustrated{background: url('frustrated.jpg')no-repeat center; position: relative;width: 100%; background-size: cover; height: 900px; overflow: hidden;}
+     	 .bg_frustrated p{position: absolute; top: 870px;left: 270px; line-height: 1.7; font-size: 3.5rem}
+     	.gradient_transition_black_to_orange{height: 300px;
+ 		 background: linear-gradient(to bottom, black, #ffba4b);}
+ 		 .fullwidth-banner {
+  		display: block;
+ 		width: 100vw;
+ 	 	height: auto;
+  		margin: 0;
+  		padding: 0;
+		}
+		.fullwidth-wrapper {
+  		margin-left: -100px;
+  		margin-right: -100px;
+		}
+
+
+	</style>
+
+</head>
+<body>
+<nav class="bg_black nav_text flex">
+	<h2 class="white">그다지 겪고싶진 않았지만-</h2>
+	<h2 class="white text_right">2025.03.25</h2>
+</nav>
+<header class="title_bg">
+	<div>
+	<h1 class="title_text2">영화관에서 있었던</h1>
+	<h1 class="text_center title_text">황당한 일들</h1>
+	</div>
+</header>
+<section class="bg_black">
+	<h2 class="white h2_size">나는<br>영화보는 것을<br><span class="red">굉장히<br><span class="white">좋아한다.</h2>
+	<p class="white text_right basic_text padding-top1 padding-bottom1">요새는 굉장히 바빠서 새로 개봉한 영화들을 보러 갈 생각조차 하지 못했지만, 한가했을 때에는 곧잘 영화관에 갔다.
+	<br>영화관을 자주 갔기에 마주친 어이없고 황당한 일들도 더러 있었다.지금부터 그 중 기억에 남는 몇개를 이야기 해보고자 한다.</p>
+</section>
+<section class="ep1_bg">
+	<div>
+	<h2 class="lightyellow basic_text text_center">Ep.01</h2>
+	<h2 class="h2_size text_center lightyellow">그대들은 어떻게 살 것인가</h2>
+	</div>
+</section>
+<section class="gradient1">
+	<p class="text_right basic_text gradient1_text1">지브리 애니메이션 ‘그대들은 어떻게 살 것인가’를 보러 갔을 때다.<br>'가구야 공주’ 이후 오래간만에 보는 지브리 작품이었기 때문에 들뜬 마음으로 영화 볼 준비를 했다.</p>
+	<div class="popcorn_text1">
+	<p class="basic_text gradient1_text2 gradient1_lineheight z-index">항상 먹는 캬라멜 팝콘과 콜라를 사고 미리 예매해놓은 좌석에 앉았다 .   
+	<br><span class="gradient1_text_big padding-top2 ">영화는 흥미진진했다.</p>
+	</div>
+	<div class="popcorn_container">
+	<img src="popcorn.png">
+	</div>
+	<div class="coke_container">
+  	<img src="coke.png" alt="콜라">
+	</div>
+</section>
+<section class="section-with-gif">
+    	<div class="gif_background"></div>
+   		 <div class="image-container">
+        <img src="soundissue.jpg" class="center-image">
+   		 </div>
+   		 <div class="speech-bubble bubble1">근데.. 갑자기..</div>
+   		 <div class="speech-bubble bubble2">소리가 안들려..?</div>
+	</section>
+<section class="bg_white">
+	<p class="basic_text text_center padding-top1">나만 그런건지 보려고 주위를 둘러보니 다들 무슨일인지 당황해하고 있었다.<br>곧이어 영화 화면이 멈추고 (?) 직원이 들어오더니 기계 쪽에 문제가 있는 것 같다고 허리를 숙여 사과했다.<br>상영관 불이 켜지고 흘러간 5분동안 환불을 받겠다며 화를 내고 나가는 사람들도 있었다.</p>
+	<p class="basic_text text_center padding-top1 padding-bottom1">
+	난 그저 영화가 멈추기 전 진행된 이야기를 곱씹으며 어서빨리 영상이 다시 재생되기를 기다렸다.<br> 5분이 지나고 다행히도 영화는 정상적으로 상영이 되었고, 피해에 대한 보상으로 상영관을 나가는 사람들은 공짜 영화 티켓을 받을 수 있었다!<br>(별개로 끝까지 보고나니 영화는 재미가 없더라)</p>
+</section>
+<section class="ep2_bg">
+	<div>
+	<h2 class="lightyellow basic_text text_center">Ep.02</h2>
+	<h2 class= "h2_size text_center lightyellow">에브리씽 에브리웨어 올앳원스</h2>
+	</div>
+</section>
+<section class="bg_white">
+	<p class="basic_text padding-top1">영화 ‘에브리씽 에브리웨어 올앳원스’를 보러 갔을 때였다.<br>영화 시작 전 10분 동안 나오는 광고를 틈타 나와 지인은 수다를 떨기 시작했다.</p>
+	<p class="text_right text_size1 padding-top2 padding-bottom1">그러자 내 바로 옆자리에<br>
+	앉아계신 할머니가<br>나를 툭툭 치며 <span class="red">좀 조용히 하라고<br> 
+	<span class="black">주의를 주는 것이다.</p>
+</section>
+<section class="bg_black" style="position: relative;">
+		<div class="emoji-container">
+   		<img src="think_emoji.png" alt="이모지 사진" class="thinking-emoji">
+   		<div class="eea-speachbubble">아~<br>소리에 좀 예민하신 분인가보다~</div>
+		</div>
+		<p class="text_center white basic_text padding-top1">라고 생각하며 나는 입을 다물었다. 길고 긴 광고가 끝나고<br>영화 시작 30분 뒤, 나는 갑자기 이상한 기분이 들어 옆자리를 슬쩍 보았다.</p>
+</section>
+<section class="gradient_transition_black_to_orange"></section>
+</section>
+<section class="bg_red">
+	<div class="ep2_img_container">
+	<img src="harmony.jpg" style="display: block; width: 1300px;height: 1300px;">
+	</div>
+	<div class="padding-top2 text-overlay ">
+	<p class="white text_size1 padding-top2 ">광고 시간에 조용히 하라며<br>인상을 찌푸린채 손가락을<br>입에 대고 주의를 주던<br>할머니는, 막상 영화가</p>
+	<p class="text_size3 tight-line white">상영되는 내내</p>
+	<p class="text_size1 tight-line white">곤히 잠들어계셨다. . . .</p>
+	</div>
+</section>
+<section class="ep3_bg">
+	<div>
+	<h2 class="lightyellow basic_text text_center">Ep.03</h2>
+	<h2 class="h2_size text_center lightyellow">아바타</h2>
+	</div>
+</section>
+<section class="bg_black">
+	<p class="white text_center basic_text" style="padding-bottom: 300px;">영화 ‘아바타’를 보러 갔을 때다. 당시로서는 상상도 못할 3D 기술이 놀라웠기에 예고편을 보고 난 이후 이 영화를 보지 않을 수 없었다.<br>설레는 마음으로 영화 관람을 시작했다.</p>
+	<div class="boom_box">
+	<img src="boom_box.png">
+	<span class="boom_text">그런데!</span>
+	</div>
+	<p class="white text_size1 text_right padding-top1 padding-bottom1">옆자리 초딩이 계속 자기 친구한테 다음 장면을 스포일러 하기 시작하는 것이었다.</p>
+</section>
+<section class="bg_frustrated">
+	<p class="text_center basic_text stroke-text ">-처음에는 그냥 혼자 추측하는 것이겠거니 생각했지만 웬걸, 정확히 어떤 장면으로 넘어갈지 말하는게 아니겠는가.<br>스포일러는 후반부 토루크의 등장까지 계속 됐다. 아무리 눈치를 주고 째려봐도 조잘조잘 떠드는걸 멈추지 않았다.</p>
+</section>
+<section class="bg_white">
+	<h2 class="text_size3 padding-top1">이쯤되니<br>고백하겠다.</h2>
+	<div class="sorry_container">
+	<img src="sorry.jpg">
+	</div>
+	<h2 class="text_right text_size3">사실 스포일러를 하던 초딩은 나였다.</h2>
+	<p class="basic_text padding-top1 text_center padding-bottom1">지금 내가 영화관에 갈때마다 겪는 모든 관크는 과거 나의 죄로부터 비롯된 업보라고 생각하며 살아가는 중이다.<br>아직도 그때 옆자리에 앉아있던 분들께는 죄송함을 느낀다.</p>
+</section>
+<section class="bg_black" style="padding-bottom: 0;">
+	<h2 class="white h2_size">그 외..</h2>
+	<div class="fullwidth-wrapper">
+  	<img src="end.gif" class="fullwidth-banner">
+	</div>
+	<p class="text_right white basic_text padding-top4">이제는 용서해드리겠습니다..</p>
+</section>
+<footer>
+	영화관에서 있었던 황당한 일들&copy;2025 김수지 모든 권리보유.
+</footer>
+</body>
+</html>
